@@ -9,6 +9,7 @@
   <title>Second Hand</title>
 
   <link rel="stylesheet" href="css/index.css">
+  <script src="scripts/index.js" type="module"></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
 
       <div class="header__search">
         <form action="#" class="search">
-          <input type="search" class="search__input">
+          <input type="search" class="search__input" required>
           <button class="search__button" type="button"></button>
           <button class="search__close" type="button"></button>
         </form>
@@ -69,24 +70,25 @@
   <main>
     <section class="hero">
       <div class="container hero__container">
-        <div class="hero__slider">
-          <ul class="hero__slider-wrapper">
-            <li class="hero__slider-item">
+        <div class="hero__slider swiper">
+          <ul class="hero__slider-wrapper swiper-wrapper">
+            <li class="hero__slider-item swiper-slide">
               <a href="?category=women" class="hero__slider-link" style="background-image: url('img/banner-women.jpg');">
                 <h2 class="hero__slider-title">Новые поступления блузок</h2>
               </a>
             </li>
-            <li class="hero__slider-item" hidden>
+            <li class="hero__slider-item swiper-slide">
               <a href="?category=men" class="hero__slider-link" style=" background-image: url('img/banner-men.jpg')">
                 <h2 class="hero__slider-title">Мужские стильные рубашки</h2>
               </a>
             </li>
-            <li class="hero__slider-item" hidden>
+            <li class="hero__slider-item swiper-slide">
               <a href="?category=kids" class="hero__slider-link" style=" background-image: url('img/banner-kids.jpg')">
                 <h2 class="hero__slider-title">Собираем ребенка в&nbsp;школу</h2>
               </a>
             </li>
           </ul>
+          <div class="swiper-pagination hero__slider-pagination"></div>
         </div>
       </div>
     </section>
@@ -320,7 +322,7 @@
 
       <ul class="footer__list-contacts">
         <li class="footer__item">
-          <a href="tel:88004958449" class="footer__link">8 800 495 84 49</a>
+          <a href="tel:88004958449" class="footer__link">8&nbsp;800&nbsp;495&nbsp;84&nbsp;49</a>
         </li>
 
         <li class="footer__item">
