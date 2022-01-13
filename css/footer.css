@@ -103,7 +103,7 @@
     }
     .copyright_bottom:after {
         display: inline-block;
-        bottom:0px;
+        bottom:1px;
         width: 85%;
       
     }
