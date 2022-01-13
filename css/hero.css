@@ -13,6 +13,7 @@
     background-repeat: no-repeat;
 }
 .hero__slider-title {
+  max-width: 500px;
     font-weight: normal;
     font-size: 60px;
     font-weight: 400;
@@ -51,6 +52,7 @@
 @media (max-width: 760px) {
     .hero__slider-title {
       font-size: 38px;
+      max-width: 460px;
     }
 
     .hero__slider-link {
@@ -64,6 +66,7 @@
     }
      .hero__slider-title {
        font-size: 30px;
+       max-width: 350px;
     }
      .hero__slider-link {
        padding: 60px 20px;
