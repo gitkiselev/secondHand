@@ -8,7 +8,7 @@ const slider = ({
   new Swiper(selectorSlider, {
     autoplay: true,
     loop: true,
-    effect: "coverflow",
+    effect: "fade",
     coverflowEffect: {
       rotate: 60,
     },

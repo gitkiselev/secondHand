@@ -79,6 +79,22 @@
     .hero__slider-link {
       padding: 60px 60px;
     }
+    .hero__slider-line {
+      cursor: pointer;
+      display: inline-block;
+      width: 30px;
+      height: 4px;
+      background-color: #fff;
+      opacity: 0.5;
+      margin: 4px;
+      will-change: width;
+      transition: width .3s ease, opacity .3s ease;
+    }
+
+    .hero__slider-line_active {
+      opacity: 1;
+      width: 60px;
+    }
 }
 
 @media (max-width: 580px) {
