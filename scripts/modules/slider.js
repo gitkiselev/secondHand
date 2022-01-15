@@ -3,33 +3,49 @@ const slider = ({
   selectorSlider,
   selectorPagination: el,
   bulletClass,
-  bulletActiveClass
+  bulletActiveClass,
+  selectorParentSlider,
 }) => {
-  new Swiper(selectorSlider, {
+  const swiper = new Swiper(selectorSlider, {
+    init: false,
     autoplay: true,
     loop: true,
-    effect: "fade",
+    effect: "coverflow",
     coverflowEffect: {
       rotate: 60,
     },
     pagination: {
-        el,
-        type: 'bullets',
-        bulletClass,
-        bulletActiveClass,
-        clickable: true
+      el,
+      type: "bullets",
+      bulletClass,
+      bulletActiveClass,
+      clickable: true,
     },
     on: {
-        init() {
-            this.el.addEventListener('mouseenter', () => {
-                this.autoplay.stop()
-            })
-             this.el.addEventListener("mouseleave", () => {
-               this.autoplay.start();
-             });
-        }
-    }
+      init() {
+        this.el.addEventListener("mouseenter", () => {
+          this.autoplay.stop();
+        });
+        this.el.addEventListener("mouseleave", () => {
+          this.autoplay.start();
+        });
+      },
+    },
   });
+
+  const checkSlider = () => {
+    const href = location.href;
+    if (href.includes("?")) {
+      swiper.disable();
+      document.querySelector(selectorParentSlider)?.remove();
+    } else {
+      swiper.init();
+    }
+  };
+
+  checkSlider();
+
+  return checkSlider;
 };
 
 export default slider;
