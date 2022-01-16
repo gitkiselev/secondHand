@@ -7,7 +7,7 @@ const article = document.querySelector('.modal-item__text_article')
 const btnToCart = document.querySelector('.modal-item__btn-to-cart') 
 const btnToFavorite = document.querySelector('.modal-item__btn-to-favorite') 
 
-const renderModal = () => {
+const renderModal = (data) => {
     
     img.src= data.image
     img.alt = data.title
