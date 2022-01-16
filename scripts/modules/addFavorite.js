@@ -28,7 +28,10 @@ const addFavorite = (linkFavoriteHandler, targetSelector, parentSelector, change
             toggleStorage('favorite', target.dataset.id)
             updateLinks()
 
-            document.querySelectorAll(`${changeActiveClass}[data-id="${target.dataset.id}"]`);
+            document.querySelectorAll(`${changeActiveClass}[data-id="${target.dataset.id}"]`)
+            .forEach(elem => {
+                elem.classList.toggle('active')
+            })
         })
     }
    

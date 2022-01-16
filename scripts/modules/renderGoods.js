@@ -3,7 +3,7 @@ import { getStorage } from "../service/serviceStorage.js";
 
 const createCard = ({ id, title, image, price, discountPrice }) => {
   const allFavorite = getStorage('favorite')
-
+console.log(allFavorite)
   const li = document.createElement("li");
 
   li.classList.add("goods__item");

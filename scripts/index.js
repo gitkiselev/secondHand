@@ -54,12 +54,12 @@ itemModal({
 addFavorite({
   linkFavoriteHandler: ".header__btn_favorite",
   targetSelector: ".item__favorite-btn",
-  parentSelector: ".goods__list",
+  parentSelector: ".goods__list"
 });
 
 addFavorite({
   linkFavoriteHandler: ".header__btn_favorite",
   targetSelector: ".modal-item__btn-to-favorite",
-  changeActiveClass: ".item__favorite-btn",
-});
+  changeActiveClass: ".item__favorite-btn"
+})
 

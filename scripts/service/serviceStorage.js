@@ -1,12 +1,12 @@
 export const getStorage = (key) => {
-    localStorage.getItem(key) ? localStorage.getItem(key) : []
+    return localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : []
 }
 
-export const setStorage = () => {
-    localStorage.setItem(key, JSON.stringify(data))
+export const setStorage = (key, data) => {
+    return localStorage.setItem(key, JSON.stringify(data))
 }
 
-export const toggleStorage = (storage, id) => {
+export const toggleStorage = (key, id) => {
     const data = getStorage(key)
     const setData = new Set(data)
     if (setData.has(id)) {
@@ -14,5 +14,5 @@ export const toggleStorage = (storage, id) => {
     } else {
         setData.add(id)
     }
-    setStorage(key, setData)
+    setStorage(key, [...setData])
 }

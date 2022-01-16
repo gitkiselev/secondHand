@@ -57,8 +57,8 @@ if (selectorParent) {
 } else {
     const target = document.querySelector(selectorHandler)
     
-    
 }
+
 modal.addEventListener('click', e => {
     const target = e.target;
     if (target === modal || target.closest(closeSelector)) {
