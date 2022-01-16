@@ -17,7 +17,9 @@
     color: var(--main-bg-color);
     transition: color .4s ease;
 }
-
+.item__favorite-btn.active {
+  color: var(--heart-color)
+}
 .item__favorite-btn:hover {
     color: var(--heart-color);
     opacity: 0.5;
